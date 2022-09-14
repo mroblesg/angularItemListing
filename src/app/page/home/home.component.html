@@ -1,0 +1,8 @@
+<app-carousel></app-carousel>
+<div class="row mt-5">
+
+    <div *ngFor="let pokemon of pokemons" class="col-sm-4">
+        <app-product-item [pokemon]="pokemon"></app-product-item>
+    </div>
+
+</div>

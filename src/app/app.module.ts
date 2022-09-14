@@ -8,6 +8,9 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { StarsComponent } from './stars/stars.component';
 import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './page/home/home.component';
+import { ProductDetailComponent } from './page/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { FooterComponent } from './footer/footer.component';
     CarouselComponent,
     ProductItemComponent,
     StarsComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ProductDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

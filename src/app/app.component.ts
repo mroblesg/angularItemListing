@@ -9,13 +9,6 @@ import { ProductService } from './product.service';
 })
 export class AppComponent {
 
-  title: string;
-  pokemons: ProductItem[];
-
-  constructor(private productService: ProductService) {
-    this.title = 'productsListing';
-    this.pokemons = this.productService.getPokemons();
-  }
-  
+  constructor(private productService: ProductService) { }
 
 }

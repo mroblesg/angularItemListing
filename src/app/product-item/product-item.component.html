@@ -4,5 +4,6 @@
       <h4 class="card-title">{{ pokemon.title }}</h4>
       <p class="card-text">{{ pokemon.description }}</p>
       <app-stars></app-stars>
+      <a [routerLink]="'/item/' + pokemon.id">Ver más</a>
     </div>
   </div>
