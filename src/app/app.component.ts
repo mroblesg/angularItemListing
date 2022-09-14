@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductItem } from './product-item';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,14 @@ import { ProductItem } from './product-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'productsListing';
-  item1: ProductItem = new ProductItem("assets/img/img1.jpg", "First Product", "First Product description from class");
-  item2: ProductItem = new ProductItem("assets/img/img2.png", "Second Product", "Second Product description from class");
-  item3: ProductItem = new ProductItem("assets/img/img3.jpg", "Third Product", "Third Product description from class");
+
+  title: string;
+  pokemons: ProductItem[];
+
+  constructor(private productService: ProductService) {
+    this.title = 'productsListing';
+    this.pokemons = this.productService.getPokemons();
+  }
+  
+
 }

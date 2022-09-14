@@ -8,7 +8,12 @@
       <div class="container-fluid">
         <app-carousel></app-carousel>
         <div class="row mt-5">
-          <div class="col-sm-4">
+
+          <div *ngFor="let pokemon of pokemons" class="col-sm-4">
+            <app-product-item [pokemon]="pokemon"></app-product-item>
+          </div>  
+
+          <!-- <div class="col-sm-4">
             <app-product-item [imgSrc]="item1.imgSrc" [description]="item1.description" [title]="item1.title"></app-product-item>
           </div>
           <div class="col-sm-4">
@@ -16,7 +21,9 @@
           </div>
           <div class="col-sm-4">
             <app-product-item [imgSrc]="item3.imgSrc" [description]="item3.description" [title]="item3.title"></app-product-item>
-          </div>
+          </div> -->
+
+
         </div>
       </div>
     </div>

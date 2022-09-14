@@ -9,10 +9,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductItemComponent implements OnInit {
 
-  pokemon: ProductItem
-  @Input() imgSrc = "";
-  @Input() title = "";
-  @Input() description = "";
+  @Input() pokemon: ProductItem;
 
   constructor(productService: ProductService) {
     this.pokemon = productService.getPokemon();
