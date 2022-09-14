@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <app-nav-bar></app-nav-bar>
+  <div class="row mt-5">
+    <div class="col-sm-3">
+      <app-search></app-search>
+    </div>
+    <div class="col-sm-9">
+      <div class="container-fluid">
+        <app-carousel></app-carousel>
+        <div class="row mt-5">
+          <div class="col-sm-4">
+            <app-product-item [imgSrc]="item1.imgSrc" [description]="item1.description" [title]="item1.title"></app-product-item>
+          </div>
+          <div class="col-sm-4">
+            <app-product-item [imgSrc]="item2.imgSrc" [description]="item2.description" [title]="item2.title"></app-product-item>
+          </div>
+          <div class="col-sm-4">
+            <app-product-item [imgSrc]="item3.imgSrc" [description]="item3.description" [title]="item3.title"></app-product-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
